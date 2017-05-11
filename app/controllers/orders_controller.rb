@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user! only: [:create]
+  before_action :authenticate_user!,  only: [:create]
 
   def create
     @order = Order.new(order_params)
@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
   end
 
 
-  private  
+  private
 
   def order_params
     params.require(:order).permit(:billing_name, :billing_address, :shipping_name, :shipping_address)
