@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!,  only: [:create]
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find_by_token(params[:id])
     @product_lists = @order.product_lists
   end
 
@@ -12,8 +12,7 @@ class OrdersController < ApplicationController
     @order.total = current_cart.total_price
 
     if @order.save
-
-      current_cart.cart_items each do |cart_item|
+      current_cart.cart_items.each do |cart_item|   
         product_list = ProductList.new
         product_list.order = @order
         product_list.product_name = cart_item.product.title
@@ -22,7 +21,7 @@ class OrdersController < ApplicationController
         product_list.save
       end
 
-      redirect_to order_path(@order)
+      redirect_to order_path(@order.token)
     else
       render 'carts/checkout'
     end
