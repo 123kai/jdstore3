@@ -23,9 +23,9 @@
     <%= image_tag(@product.image.thumb.url) %>
   <% end %>
 
-  <div class="group">  
+  <div class="group">
   <%= f.input :image, as: :file %>
-  </div
+  </div>   
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
