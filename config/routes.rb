@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  namespace :account do
+    resources :orders  
+  end
+
   # carts
   resources :carts do
     collection do
@@ -28,7 +32,7 @@ Rails.application.routes.draw do
   resources :cart_items
 
   #Order
-  resources :orders 
+  resources :orders
 
 
 
