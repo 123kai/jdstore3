@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
     @order.total = current_cart.total_price
 
     if @order.save
-      current_cart.cart_items.each do |cart_item|   
+      current_cart.cart_items.each do |cart_item|
         product_list = ProductList.new
         product_list.order = @order
         product_list.product_name = cart_item.product.title
@@ -27,6 +27,21 @@ class OrdersController < ApplicationController
     end
   end
 
+  def pay_with_alipay
+    @order = Order.find_by_token(params[:id])
+    @order.set_payment_with!("alipay")
+    @order.pay!
+
+    redirect_to order_path(@order.token), notice: "Successfully pay with alipay"
+  end
+
+  def pay_with_wechat
+    @order = Order.find_by_token(params[:id])
+    @order.set_payment_with!("wechat")
+    @order.pay!
+
+    redirect_to order_path(@order.token), notice: "Successfully pay with wechat"
+  end
 
   private
 
