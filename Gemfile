@@ -46,6 +46,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
 
+  # debug
+  gem 'pry'      # 执行时拦截呼叫
+  gem 'awesome_rails_console'    #高颜值金手指介面  
 
 
 end
