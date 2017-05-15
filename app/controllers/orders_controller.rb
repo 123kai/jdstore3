@@ -49,7 +49,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     OrderMailer.apply_cancel(@order).deliver!
     flash[:notice] = "Application has submitted"
-    redirect_to :back     
+    redirect_to :back
   end
 
   private
