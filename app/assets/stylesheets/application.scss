@@ -15,4 +15,775 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";   
+@import "font-awesome";
+/*5种背景颜色*/
+.bg-color1 {
+  background: #50514F;
+}
+
+.bg-color2 {
+  background: #F25F5C;
+}
+
+.bg-color3 {
+  background: #FFE066;
+}
+
+.bg-color4 {
+  background: #247BA0;
+}
+
+.bg-color5 {
+  background: #70C1B3;
+}
+
+.bg-color6 {
+  background: #f8f8f8;
+}
+
+
+
+.body {
+    height: 100%;
+    font-family: Lego,sans-serif;
+    background-color: #f9f9fa;
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 0.1em
+}
+
+@media (max-width: 991px) {
+    body {
+        background-color:#fff
+    }
+}
+#qz-wrapper {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#qz-content {
+    padding-bottom: 275px;
+}
+
+#qz-footer {
+    height: 275px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.navbar {
+    margin: 0  -15px;                                   //去除页面左右白边
+    letter-spacing: 0.05em
+}
+
+.navbar-default {
+    background-color: #3d3d3d;
+    border: none;
+    border-radius: 0
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-right: 0
+}
+
+.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+    color: #ccc
+}
+
+.navbar-collapse {
+    padding-right: 0
+}
+
+.navbar-default .navbar-brand img {
+    margin-right: 8px;
+    margin-top: -8px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover {
+    color: #fff
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    padding-top: 21px
+}
+
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover {
+    color: #ccc
+}
+
+.navbar-link {
+    font-size: 1em;
+    font-weight: bold
+}
+
+.navbar-link a:link {
+    color: #fff
+}
+
+.navbar-link a:visited {
+    color: #fff
+}
+
+.navbar-link a:hover {
+    color: #fff
+}
+
+.navbar-link a:active {
+    color: #fff
+}
+
+.navbar-container {
+    padding: 0 5px;
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-right {
+    margin-right: 0
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color:#fff
+    }
+
+    .dropdown-menu .divider {
+        background-color: #888;
+        margin: 0 10px
+    }
+
+    .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover {
+        background-color: transparent;
+        color: #fff
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+        color: #ccc
+    }
+}
+@media (min-width: 768px) {
+    .navbar-collapse {
+        padding-right:0;
+        padding-left: 0
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 10px
+    }
+}
+
+.logo img{
+    height: 49px;
+    width: 49px;
+    padding-right: 2px;
+}
+
+.log-in-btn {
+    display: block;
+    border: 1px solid rgba(30,204,149,0.86);
+    background-color: transparent;
+    margin: 14px 5px 14px 15px;
+    border-radius: 3px;
+    height: 32px;
+    width: 68px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 0 !important;
+    line-height: 32px !important
+}
+
+.log-in-btn:hover {
+    color: #fff !important;
+    border: 1px solid #fff
+}
+
+.sign-up-btn {
+    display: block;
+    border: 1px solid #1ecd97;
+    background-color: rgba(30,204,149,0.86);
+    margin: 14px 0 14px 15px;
+    border-radius: 3px;
+    height: 32px;
+    width: 68px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 0 !important;
+    line-height: 32px !important
+}
+
+.sign-up-btn:hover {
+    color: #fff !important;
+    background-color: rgba(30,204,149,0.99) !important
+}
+
+.lp-section-1 {
+    display: block;
+    background-color: bg-color4;
+    background-position: 100%;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;                         //去除页面左右白边
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: 90;
+}
+
+.lp-section-1 .content-1 {
+    display: block;
+    margin-left: -15px;
+    margin-right: -65px;
+    // max-width: 960px;
+    // min-width: 320px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: 91;
+    text-align: center;
+
+}
+.lp-section-1 .content-1 h2 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 0.1em
+}
+
+.lp-section-1 .content-1 p {
+    font-size: 16px;
+    line-height: 1.6em;
+    color: #f2f2f2;
+    margin: 20px 0 100px;
+    letter-spacing: 0.15em
+}
+
+@media (max-width: 768px) {
+    .lp-section-1 {
+        background-position:20% 100%
+    }
+
+    .lp-section-1 .content-1 {
+        max-width: 100%;
+        padding-top: 120px
+    }
+
+    .lp-section-1 .content-1 h2 {
+        font-size: 36px;
+        line-height: 52px;
+        padding: 0 40px
+    }
+
+    .lp-section-1 .content-1 p {
+        font-size: 16px;
+        margin: 20px 0 80px;
+        padding: 0 50px
+    }
+
+    .lp-section-1 .content-1 .video-btn-block {
+        margin-top: 60px
+    }
+}
+
+@media (max-width: 632px) {
+    .lp-section-1 {
+        background-position:20% 100%;
+        height: 580px;
+    }
+
+    .lp-section-1 .content-1 {
+        clear: both
+    }
+}
+
+.lp-section-2 {
+    background-color: #f2f2f2;
+    height: 510px;
+    margin-top: -275px;    // lp1 和 lp2中间有空隙
+    margin-bottom: 200px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.lp-section-2 .content-2 {
+    margin-top: 55px;
+    padding-top: 30px;
+}
+
+.lp-section-2 .content-2 h2 {
+  font-size: 1.428em;
+  text-align: center;
+  padding-bottom: 60px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 830px) {
+    .lp-yuan {
+        box-sizing:border-box;
+        padding: 0 20px;
+        max-width: 100%
+    }
+}
+
+@media (max-width: 768px) {
+    .lp-section-2 {
+        height:520px
+    }
+
+    .lp-section-2 .content-2 {
+        width: 100%;
+        padding: 30px 20px 0
+    }
+
+    .lp-section-2 .content-2 img {
+        width: auto;
+        max-width: 100%;
+        height: auto
+
+    }
+}
+
+
+.lp-section-3 {
+    display: block;
+    width: 100%;
+    height: 550px;
+    min-width: 960px;
+    background: #fff;
+    background-position: center top;
+    background-size: cover;
+
+
+}
+.lp-section-3 .short-line {
+    display: block;
+    background: #1ecd97;
+    border-style: none;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    z-index: 53;
+    width: 50px;
+    height: 3px;
+    position: relative;
+}
+
+.lp-section-3 .content-3 {
+    display: block;
+    width: 960px;
+    height: 550px;
+    margin:0 -15px;
+    text-align: center;
+    padding-top: -25px;
+}
+
+.lp-section-3 .content-3 h2 {
+  font-size: 1.428em;
+  text-align: center;
+  padding-bottom: 60px;
+  letter-spacing: 3px;
+}
+
+
+
+@media (max-width: 960px) {
+    .lp-section-3 {
+        min-width:100%;
+        height: 850px
+    }
+
+    .lp-section-3 .content-3 {
+        width: 100%;
+        height: auto;
+        padding-top: 30px
+    }
+
+    .lp-section-3 .content-3 h2 {
+        font-size: 1.428em;
+        text-align: center;
+        padding-bottom: 40px;
+        letter-spacing: 3px
+    }
+
+    .lp-section-3 img{
+      position: relative;
+    }
+}
+
+.lp-section-bottom {
+    display: block;
+    background: linear-gradient(rgba(12,12,9,0.4), rgba(12,12,9,0.4)),url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/search--201606--gl--banner-background--medium?$BannerBackgroundMedium$?$BannerBackgroundMedium$");
+    background-position: center 50%;
+    background-size: cover;
+    margin:0 -15px;
+    min-width: 100%;
+    height: 225px;
+    position: relative
+}
+
+.lp-section-bottom .bottom-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // max-width: 700px;
+    min-width: 100%;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    padding-top: 40px
+}
+
+.lp-section-bottom .bottom-content p {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 60px;
+    letter-spacing: 3px
+}
+
+@media (max-width: 960px) {
+    .lp-section-bottom {
+        min-width:100%;
+        height: 250px
+    }
+
+    .lp-section-bottom .bottom-content {
+        max-width: 100%;
+        height: auto;
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px
+    }
+}
+
+.short-line {
+    display: block;
+    background: #1ecd97;
+    border-style: none;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 30px; 
+    z-index: 53;
+    width: 50px;
+    height: 3px;
+    position: relative;
+}
+//------------------- Footer ------------- //
+
+footer {
+    color: white;
+}
+
+footer .space {
+    margin-top: 5em;
+
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
+}
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+	background-color: #ff8a80;
+}
+.social-network a.icoVote:hover {
+	background-color:#29B6F6;
+}
+.social-network a.icoGitHub:hover {
+	background-color:#90A4AE;
+}
+.social-network a.icoRss:hover i, .social-network a.icoVote:hover i,
+.social-network a.icoGitHub:hover i {
+	color:#fff;
+}
+
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+
+
+
+
+.clearfix:before,.clearfix:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+
+
+
+
+
+//---------- Carousel -------------
+.carousel{
+  margin: 0 -15px;
+  height: 550px;
+  min-width: 100%;
+}
+// .carousel-inner > .item > img,
+// .carousel-inner > .item > a > img {
+//   height: 550px;  /* Set slide height here */
+//   width: 100%;
+//
+// }
+
+.carousel-inner .item img{
+  width: 100%;
+  height: 550px;
+}
+
+.carousel-inner .item{
+  height: 550px;
+  width: 100%;
+
+}
+
+/*Best Sellers*/
+.productList {
+  margin: 20px auto;
+  width: 1200px;
+  overflow: hidden;
+}
+
+.productList-item {
+  float: left;
+  width: 228px;
+  height: 250px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.productList-item img {
+  width: 228px;
+  height: 275px;
+
+}
+
+.productList-lastItem {
+  margin-right: 0;
+}
+
+//----------- Service ------
+
+.serviceList {
+    margin: 20px auto;
+    width: 1200px;
+    overflow: hidden;
+  }
+
+.serviceList-item {
+    // float: left;
+    // width: 400px;
+    // height: 350px;
+    // margin-right: 175px;
+    // margin-left: 25px;
+    // margin-bottom: 15px;
+    float: left;
+    height: 442px;
+    width: 552px;
+    padding: 48px 48px 48px 48px;
+    min-height: auto;
+    min-width: auto;
+    margin-right: 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+ .serviceList-item .tour{
+   display: block;
+   height: 215px;
+   width: 400px;
+   max-height: 215px;
+   min-height: 140px;
+   position: relative;
+
+  }
+
+.serviceList-lastItem {
+    margin-right: 0;
+  }
+
+.service-box {
+  display: block;
+  height: 50px;
+  width: 200px;
+  margin-left: 105px;
+  margin-top: 50px;
+
+}
+
+
+.tour-1 {
+      background-image: url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/new?$GlobalNavHeader$");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 215px;
+      width: 400px;
+
+  }
+.tour-2 {
+      background-image: url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/view-all?$GlobalNavHeader$");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 215px;
+      width: 400px;
+  }
+
+.tour-3 {
+      background-image: url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/touts%2D%2D2uptall%2D%2Dvip?$Tout2UpTallForeground$");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 215px;
+      width: 400px;
+  }
+.tour-4 {
+      background-image: url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/more%2Dlego%2Dbricks?$Tout2UpTallForeground$");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 215px;
+      width: 400px;
+  }
+
+.btn-block {
+  display: block;
+  width: 400px;
+  height: 40px;
+
+
+}
+.action-btn {
+      text-decoration: none;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      cursor: pointer;
+      margin: 0 auto;
+      -webkit-border-radius: 0.2em;
+      border-radius: 0.2em;
+      text-align: center;
+      font-size: 1.428em;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      padding: 0.57em 1.9em;
+      margin-top: 2.85em;
+      text-align: center;
+      -o-text-overflow: clip;
+      text-overflow: clip;
+      letter-spacing: 2px;
+      color: white;
+      background: #1ecd97;
+      border: 2px solid #1ecd97;
+      -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0);
+      -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0);
+      -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0);
+      transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0)
+  }
+
+
+
+  .action-btn:hover {
+      color: white;
+      background: #21e0a3;
+      border: 2px solid #21e0a3;
+      text-decoration: none;
+  }
+
+  .action-btn:active {
+      border: 2px solid #1ecd97;
+      background: #1ecd97;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      transition: none;
+      text-decoration: none;
+  }
+
+  .action-btn.active.focus,.action-btn.active:focus,.action-btn.focus,.action-btn:active.focus,.action-btn:active:focus,.action-btn:focus {
+      color: white;
+      outline: 0 auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  #root "welcome#index"
+  root "welcome#index"
 
-  root "products#index"
+  #root "products#index"
 
   # products
   resources :products do
@@ -44,7 +44,7 @@ Rails.application.routes.draw do
     member do
       post :pay_with_alipay
       post :pay_with_wechat
-      post :apply_to_cancel 
+      post :apply_to_cancel
     end
   end
 
