@@ -26,7 +26,7 @@
             </li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right"> 
+          <ul class="nav navbar-nav navbar-right">
             <% if !current_user %>
               <li><%= button_to('Sign Up',new_user_registration_path, method: :get, class: "sign-up-btn") %></li>
               <li><%= button_to('Log In', new_user_session_path, method: :get, class: "log-in-btn") %></li>
