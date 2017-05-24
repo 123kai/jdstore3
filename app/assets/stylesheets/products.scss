@@ -1,3 +1,61 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body{
+  background-color: #eee;
+  font-family: calibri, sans-serif;
+}
+.product-content{
+
+  width: 760px;
+  margin: 20px auto;
+  height: 2000px;
+}
+
+.product-leaf {
+  width: 230px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin:0 10px;
+  position: relative;
+}
+
+.product-leaf  img{
+  width: 230px;
+}
+
+.product-leaf  i {
+  width: 50px;
+  height: 50px;
+  background: #70C1B3;
+  color:  #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.4rem;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+  box-shadow: 0 0 4px 2px rgba(80, 80, 80, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.product-leaf  i:hover{
+  transform: scale(1.05);
+}
+
+.product-leaf  h3{
+  margin-left: 20px;
+}
+
+.product-leaf  p {
+  margin-left: 20px;
+}
+
+.row p::before,
+.product-leaf p::before,  
+.totalprice::before{
+  content: "$";
+}

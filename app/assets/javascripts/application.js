@@ -43,3 +43,48 @@ $(document).ready(function(){
   });
 
 });
+
+
+
+//-------------- product index --------------   
+$(".box i").click(function() {
+
+  var productImg = $(this).siblings("img").attr('src');
+  var productimgNo = $(this).siblings("img").attr('alt');
+  var productName = $(this).siblings("h3").text();
+  var productPrice = $(this).siblings("p").text();
+  var productQty = 1;
+  var total = parseFloat(productPrice);
+  var info = $('<div class="row">' + '<img src="' + productImg + '" class="' + productimgNo + '">' + '<h4>' + productName + "</h4>" + '<p>' + productPrice + "</p>" + '<div class="qty-minus">-</div>' + '<div class="qty">' + productQty + '</div>' + '<div class="qty-plus">+</div>' + '<div class="del">Remove</div>' + '<div class="totalprice">' + total + '</div>' + '</div>');
+
+  /*add item*/
+  $("#cart").append(info);
+
+  /*if item exist, add quantity*/
+  if ($('.pic1').size() > 1) {
+    var newQty = parseInt($('.pic1').first().siblings('.qty').text()) + 1;
+    $('.pic1').parents('.row').first().remove();
+    $('.pic1').siblings('.qty').text(newQty);
+    total = newQty*productPrice;
+    $('.pic1').siblings('.totalprice').text(total);
+  } else if ($('.row .pic2').size() > 1) {
+    var newQty = parseInt($('.pic2').first().siblings('.qty').text()) + 1;
+    $('.pic2').parents('.row').first().remove();
+    $('.pic2').siblings('.qty').text(newQty);
+    total = newQty*productPrice;
+    $('.pic2').siblings('.totalprice').text(total);
+  } else if ($('.pic3').size() > 1) {
+    var newQty = parseInt($('.pic3').first().siblings('.qty').text()) + 1;
+    $('.pic3').parents('.row').first().remove();
+    $('.pic3').siblings('.qty').text(newQty);
+    total = newQty*productPrice;
+    $('.pic3').siblings('.totalprice').text(total);
+  }
+
+
+
+  /*delete item*/
+  $('.del').click(function() {
+    $(this).parents(".row").remove();
+  });
+});
