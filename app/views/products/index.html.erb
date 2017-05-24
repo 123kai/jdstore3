@@ -1,21 +1,28 @@
-<div class="row">
-  <div class="product-content">
-    <% @products.each do |product| %>
-      <%= link_to product_path(product) do %>
-        <div class="product-leaf">
-          <% if product.image.present? %>
-            <%= image_tag(product.image.thumb.url) %>
-            <i class="fa fa-plus"></i>
+<div class="product-wrapper">
+  <div class="row">
+    <div class="product-banner">
+    </div>
+      <div class="product-content">
+        <% @products.each do |product| %>
+          <%= link_to product_path(product) do %>
+            <div class="product-leaf">
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "product-leaf-img") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+              <% end %>
+              <i class="fa fa-plus"></i>
+              <button type="button" class="product-leaf-favourite"></button>
+              <h3 class="product-leaf-title"><%= product.title %></h3>
+              <div class="product-ratings">
+                <div class="rating-brick">
+                </div> 
+              </div>
+              <p class="product-leaf-price"><%= product.price %></p>
 
-          <% else %>
-            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            </div>
           <% end %>
-          <h3><%= product.title %></h3>
-          <p><%= product.price %></p>
-        </div>
-      <% end %>
-    <% end %>
+        <% end %>
+      </div>
   </div>
 </div>
-
- 

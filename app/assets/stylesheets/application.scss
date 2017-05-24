@@ -15,7 +15,12 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
+@import "font-awesome"; 
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
+
+
+
+
 /*5种背景颜色*/
 .bg-color1 {
   background: #50514F;
@@ -41,9 +46,11 @@
   background: #f8f8f8;
 }
 
+html {
+    height: 100%;                                        // footer固定底部
+    }
 
-
-.body {
+body {
     height: 100%;
     font-family: Lego,sans-serif;
     background-color: #f9f9fa;
@@ -497,7 +504,7 @@
 footer {
     bottom: 0;
     width: 100%;
-    height: 110px; 
+    height: 110px;
     color: white;
 }
 
