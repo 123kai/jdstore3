@@ -23,8 +23,9 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
-
+  # config.assets.compile = false
+  config.assets.compile = true
+  
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
@@ -94,7 +95,7 @@ Rails.application.configure do
     authentication: "login",
     enable_starttls_auto: true,
     user_name: ENV["SEND_CLOUD_USER_NAME"],
-    password: ENV["SEND_CLOUD_USER_KEY"]  
+    password: ENV["SEND_CLOUD_USER_KEY"]
     }
 
 

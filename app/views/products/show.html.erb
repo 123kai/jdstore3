@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
@@ -14,13 +15,13 @@
       </p>
     </div>
     <div> Quantity : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
+    <div class="product-price"> $ <%= @product.price %> </div>
     <div class="pull-right">
       <% if @product.quantity.present? && @product.quantity > 0 %>
         <%= link_to("Add to cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
       <% else %>
         SOLD OUT
-      <% end %>  
+      <% end %>
     </div>
   </div>
 </div>
