@@ -26,7 +26,7 @@ html, body{
 }
 
 
-.product-content{ 
+.product-content{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -98,8 +98,7 @@ html, body{
 .product-leaf-favourite{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 5px;               //  不是margin-left ？
     width: 10%;
     height: 10%;
     background-color: transparent;
@@ -157,7 +156,7 @@ button {
     background-color: transparent;
     background-repeat: repeat-x;
     background-size: 14px 13px;
-    height: 1.125rem;
+    height: 1.125rem; 
     width: 5.6875rem;
 
 }
