@@ -1,5 +1,83 @@
+<div class="container product-show-page">
+  <div class="row">
 
-<div class="row">
+    <!-- product picture -->
+    <div class="col-md-5">
+      <% if @product.image.present? %>
+        <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+      <% else %>
+        <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+      <% end %>
+    </div>
+
+    <!-- product info -->
+    <div class="col-md-7">
+      <!-- product title  -->
+      <h2 class="product-title"><%= @product.title%></h2>
+
+      <!-- product description  -->
+      <div class="product-description">
+        <span>
+          <!-- <%= simple_format(@product.description) %> -->
+          <%= @product.description %>
+        </span>
+      </div>
+
+      <!-- product price -->
+      <div class="product-price">
+        $ <%= @product.price %>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <!-- product quantity -->
+          <div class="product-detail">
+            Quantity: <%= @product.quantity %>
+          </div>
+
+          <div class="product-detail">
+            <span> Overall Rating </span>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+      <!-- button -->
+      <div class="add-to-cart-buttom row">  
+          <!-- add product to cart -->
+          <div class="col-sm-6">
+            <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("Add to cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-primary") %>
+            <% else %>
+              <a href="#" class="btn btn-danger active" role="button" disabled="disabled">Current not available</a>
+            <% end %>
+          </div>
+
+
+     </div>
+
+   </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
@@ -24,4 +102,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</div> -->
