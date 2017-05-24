@@ -25,7 +25,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   # config.assets.compile = false
   config.assets.compile = true
-  
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
@@ -85,7 +85,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { :host => 'https://protected-sierra-87882.herokuapp.com'}
+  config.action_mailer.default_url_options = { :host => 'https://git.heroku.com/vast-tor-35217.git'}  
 
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
