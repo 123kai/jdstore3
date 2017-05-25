@@ -4,11 +4,14 @@
 
 @import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
-
+@import url('https://fonts.googleapis.com/css?family=Loved+by+the+King');
 //------- product index -------
 html, body {
   background-color: #eee;
-  font-family: sans-serif;
+  // font-family: sans-serif;
+  font-family: 'Loved by the King', cursive;
+  font-size: 35px;
+  font-weight: bold;
 
 }
 
@@ -76,11 +79,13 @@ html, body {
 .product-leaf-title{
   margin-left: 20px;
   font-size: 20px;
-  font-family: sans-serif;
+  font-weight: bold;
+
 }
 
 .product-leaf-price{
   margin-left: 190px;
+  font-size: 20px;
 }
 
 .row p::before,
@@ -123,7 +128,6 @@ html, body {
 }
 
 button{
-    font-family: sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
@@ -179,13 +183,18 @@ button {
 .product-show-page {
 
   width: 100%;
+  z-index: 150;
   margin-top: 2em;
-  margin-left: 5em;
+  background-image: url("https://www.lego.com/r/www/r/portals/-/media/images/lego-life/shared/backgr…nds/patterns/cardboards/cardboard_bg_lightblue_vertical.jpg?l.r=-889903875");
+  background-color: #d2dde3;
+  background-repeat: repeat;
+
 }
 
 // 商品标题样式
 .product-title {
-  color: #7f8c8d;
+  font-weight: 500px;
+
 }
 
 // 商品简述样式
@@ -202,14 +211,15 @@ button {
 }
 .product-price {
   font-size: 2em;
-  color: #7f8c8d;
+  font-weight: 500px;
 }
 
 //商品库存样式
 .product-detail {
   margin: 1.5em auto;
-  font-size: 1.2em;
-  font-family: sans-serif;
+  font-size: 1.4em;
+  font-weight: 500px;
+  font-family: 'Loved by the King', cursive;
 }
 
 // 按钮区域样式
