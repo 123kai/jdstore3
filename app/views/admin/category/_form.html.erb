@@ -1,0 +1,13 @@
+<div class="col-md-10 col-md-offset-1">
+  <hr />
+  <%= simple_form_for [:admin,@category] do |f| %> 
+    <div>
+      <%= f.input :name, :label => false, placeholder: 'category' %>
+      <hr />
+      <span><%= f.input :is_hidden, label: 'hide category', :input_html => { :checked => true } %></span>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "submit", disable_with: "Submiting...", class: "button"%>
+    </div>
+  <% end %>
+</div>

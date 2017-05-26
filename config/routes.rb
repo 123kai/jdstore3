@@ -12,11 +12,14 @@ Rails.application.routes.draw do
 
     collection do
       get :search
+      get :technic
+      get :marvel
     end
   end
 
   # admin
   namespace :admin do
+    resources :categories  
     resources :products
     resources :orders do
       member do
@@ -26,6 +29,16 @@ Rails.application.routes.draw do
         post :returen
       end
     end
+
+    # resources :categories do
+    #   member do
+    #     post :publish
+    #     post :hide
+    #     post :up
+    #     post :down
+    #   end
+    # end
+
   end
 
   namespace :account do

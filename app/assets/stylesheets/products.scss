@@ -177,17 +177,33 @@ button {
 
 
 //------- product show page -------
+.show-option {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 20px;
+  color: #999;
+  a {
+    color: #999;
+  }
+  a:hover {
+    color: #999;
+    text-decoration: none;
+  }
+}
 
+.product-show-box{
+  margin: 5em;
 
+}
 // 页面头部微调
 .product-show-page {
 
   width: 100%;
-  z-index: 150;
+  z-index: 150;  
   margin-top: 2em;
-  background-image: url("https://www.lego.com/r/www/r/portals/-/media/images/lego-life/shared/backgr…nds/patterns/cardboards/cardboard_bg_lightblue_vertical.jpg?l.r=-889903875");
-  background-color: #d2dde3;
-  background-repeat: repeat;
+  // background-image: url("https://www.lego.com/r/www/r/portals/-/media/images/lego-life/shared/backgr…nds/patterns/cardboards/cardboard_bg_lightblue_vertical.jpg?l.r=-889903875");
+  // background-color: #d2dde3;
+  // background-repeat: repeat;
 
 }
 

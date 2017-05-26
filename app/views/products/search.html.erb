@@ -1,21 +1,21 @@
-<div class="container search-results">
+<div class="container product-box">
   <div class="row">
 
     <% if @products.blank?%>
       <div>
-        <h3 class="search-product-title">Sorry, nothing was found...</h3>
+        <h3 class="product-title">Sorry, nothing was found...</h3>   
       </div>
     <% else %>
       <h3 class="search-product-title">
-        Find <%= @products.count %> "<%= @query_string %>" products    
+        Find <%= @products.count %> "<%= @query_string %>" products
       </h3>
         <% @products.each do |product| %>
-        <div class="col-xs-6 col-md-3 text-center search-product-list">
+        <div class="col-xs-6 col-md-3 text-center product-list">
           <% link_to product_path(product) %>
           <% if product.image.present? %>
-            <%= link_to image_tag(product.image.thumb.url, class: "search-product-list-img img-responsive center-block"), product_path(product) %>
+            <%= link_to image_tag(product.image.thumb.url, class: "product-list-img img-responsive center-block"), product_path(product) %>
           <% else %>
-            <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "search-product-list-img img-responsive center-block"), product_path(product) %>
+            <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "product-list-img img-responsive center-block"), product_path(product) %>
           <% end %>
           <br>
           <%= link_to(product.title, product_path(product)) %>

@@ -46,6 +46,10 @@
   background: #f8f8f8;
 }
 
+.bg-color7{
+  background:  #31a1e0;      // lego-blue
+}
+
 html {
     height: 100%;                                        // footer固定底部
     }
@@ -55,7 +59,7 @@ body {
     // font-family: sans-serif;
     font-family: 'Loved by the King', cursive;
     background-color: #f9f9fa;
-    color: #333;
+    color: #31a1e0;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.1em;
@@ -90,10 +94,11 @@ body {
     letter-spacing: 0.15em;
     font-size: 2em;
     font-weight: 800;
+
 }
 
 .navbar-default {
-    background-color: #3d3d3d;
+    background-color: #ffd935;
     border: none;
     border-radius: 0
 }
@@ -122,20 +127,24 @@ body {
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     padding-top: 10px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    background-color: #31a1e0;
 }
 
 .navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover {
-    color: #fff
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #fff;
-    padding-top: 21px
+    font-size: 18px;
+    font-weight: 700px;
+    letter-spacing: 0.05em;
+    color: #31a1e0;
+    padding-top: 21px;
 }
 
 .navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover {
-    color: #ccc
+    color: #fff;
 }
 
 .navbar-link {
@@ -144,19 +153,19 @@ body {
 }
 
 .navbar-link a:link {
-    color: #fff
+    color: #fff;
 }
 
 .navbar-link a:visited {
-    color: #fff
+    color: #fff;
 }
 
 .navbar-link a:hover {
-    color: #fff
+    color: #fff;
 }
 
 .navbar-link a:active {
-    color: #fff
+    color: #fff;
 }
 
 .navbar-container {
@@ -172,6 +181,48 @@ body {
 .navbar-right {
     margin-right: 0
 }
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    font-size: 18px;
+    font-weigt: 400px;
+    letter-spacing: 0.15em;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px;
+
+}
+
+.dropdown-menu li:hover {
+  background-color: #31a1e0;
+}
+
+.li-style {
+    color: #31a1e0;                                      // 修改全站的 字体主色
+    font-size: 1em;
+    font-weight: 500;
+    a {                                                 // 所有a标签统一样式
+      color: #fff;                                   // 链接反转的样式
+      transition: 0.5s;                                 // 鼠标移开时 0.5秒渐变
+    }
+    a:hover {
+      color: #fff;
+      transition: 0.5s;                                 // 鼠标指向时 0.5面渐变
+      text-decoration: none;                            // 移除下划线
+    }
+
+}
+
 
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
@@ -205,11 +256,13 @@ body {
 }
 
 .logo img{
-    height: 49px;
-    width: 49px;
+    height: 45px;
+    width: 45px;
     margin-left: 0;
     padding-right: 2px;
 }
+
+
 
 .log-in-btn {
     display: block;
@@ -219,7 +272,8 @@ body {
     border-radius: 3px;
     height: 32px;
     width: 68px;
-    color: #fff;
+    color: #31a1e0;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 2px;
     padding: 0 !important;
@@ -227,28 +281,32 @@ body {
 }
 
 .log-in-btn:hover {
-    color: #fff !important;
+    color: #31a1e0 !important;
     border: 1px solid #fff
 }
 
 .sign-up-btn {
     display: block;
     border: 1px solid #1ecd97;
-    background-color: rgba(30,204,149,0.86);
+    background-color: #fff;
     margin: 14px 0 14px 15px;
     border-radius: 3px;
     height: 32px;
     width: 68px;
-    color: #fff;
+    color: #31a1e0;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 2px;
     padding: 0 !important;
     line-height: 32px !important
 }
 
+.log-in-btn:hover{
+  background-color: #B4503C !important;
+}
 .sign-up-btn:hover {
     color: #fff !important;
-    background-color: rgba(30,204,149,0.99) !important
+    background-color: #B4503C !important;
 }
 
 .lp-section-1 {
@@ -785,8 +843,8 @@ a.socialIcon:hover, .socialHoverClass {
       text-overflow: clip;
       letter-spacing: 2px;
       color: white;
-      background: #1ecd97;
-      border: 2px solid #1ecd97;
+      // background: #1ecd97;
+      border: 2px solid #fff;
       -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0);
       -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0);
       -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),color 0.3s cubic-bezier(0, 0, 0, 0),width 0.3s cubic-bezier(0, 0, 0, 0),border-width 0.3s cubic-bezier(0, 0, 0, 0),border-color 0.3s cubic-bezier(0, 0, 0, 0);
@@ -818,6 +876,21 @@ a.socialIcon:hover, .socialHoverClass {
       outline-offset: -2px
   }
 
+//------ generall css ------
+
+.product-box {
+  margin-bottom: 3em;
+  font-weight: 500px;
+  font-size: 18px;
+}
+.product-list{
+  margin: 3em auto 2em;
+}
+
+.product-list-img {
+  margin-bottom: 1.2em;
+}
+
 
 
 //------- search bar in the navbar -------
@@ -836,7 +909,7 @@ a.socialIcon:hover, .socialHoverClass {
     border: 0;
     box-shadow: none;
     font-size: 15px;
-    font-weight: 800;  
+    font-weight: 800;
     letter-spacing: 0.05em;
 }
 
@@ -862,23 +935,11 @@ a.socialIcon:hover, .socialHoverClass {
 
 //------- search page/search.html.erb -------
 
-.search-results {
-  margin-bottom: 3em;
-  font-weight: 500px;
-  font-size: 18px;
-}
+
 
 .search-product-title {
   font-size: 25px;
   font-weight: bold;
   color: #7f8c8d;
   text-align: center;
-}
-
-.search-product-list{
-  margin: 3em auto 2em;
-}
-
-.search-product-list-img {
-  margin-bottom: 1.2em;
 }
