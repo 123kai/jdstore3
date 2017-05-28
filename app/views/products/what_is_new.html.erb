@@ -1,12 +1,12 @@
 <div class="product-wrapper">
   <div class="row">
-    <div class="product-banner">
-    </div>  
+    <div class="product-banner-what-is-new">   
+    </div>
       <div class="product-content">
         <% @products.each do |product| %>
           <%= link_to product_path(product) do %>
             <div class="product-leaf">
-              <% if product.image.present? %>
+              <% if product.image.present? and product.category.name == "new" %>
                 <%= image_tag(product.image.thumb.url, class: "product-leaf-img") %>
               <% else %>
                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>

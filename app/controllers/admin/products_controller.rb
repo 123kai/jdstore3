@@ -4,12 +4,12 @@ class Admin::ProductsController < ApplicationController
   before_action :admin_required
 
   def index
-    if params[:category].blank?
+    if params[:category].blank? 
       @products = Product.all.recent
     else
       @category_id = Category.find_by(name: params[:category]).id
       @products = Product.where(category_id: @category_id).recent
-   end
+    end
   end
 
   def show
@@ -46,7 +46,7 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  
+
   def destroy
     @product = Product.find(params[:id])
     @product.destroy

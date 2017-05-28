@@ -22,15 +22,26 @@ html, body {
 
 .product-banner {
   display: block;
+  max-width: 95.91837%;
+  height: 200px;
+  background:  url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/pick-a-brick--201606--gl--banner-background--large?$BannerBackgroundLarge$");
+  background-position: center 50%;
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto; 
+
+}
+.product-banner-what-is-new{
+  display: block;
   width: 100%;
   height: 200px;
   background:  url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/pick-a-brick--201606--gl--banner-background--large?$BannerBackgroundLarge$");
   background-position: center 50%;
   background-size: cover;
   position: relative;
-
 }
-
 
 .product-content{
   display: flex;
@@ -199,7 +210,7 @@ button {
 .product-show-page {
 
   width: 100%;
-  z-index: 150;  
+  z-index: 150;
   margin-top: 2em;
   // background-image: url("https://www.lego.com/r/www/r/portals/-/media/images/lego-life/shared/backgr…nds/patterns/cardboards/cardboard_bg_lightblue_vertical.jpg?l.r=-889903875");
   // background-color: #d2dde3;

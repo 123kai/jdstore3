@@ -2,7 +2,13 @@ class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
 
   def index
-    @products = Product.all
+    @products = Product.all    
+    if params[:category].blank?
+      @products = Product.all.recent
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @products = Product.where(category_id: @category_id).recent
+    end
   end
 
   def show
@@ -40,5 +46,5 @@ class ProductsController < ApplicationController
     Product.ransack({:title_or_description_or_particulars_cont => @query_string}).result(distinct: true)
   end
 
-  
+
 end

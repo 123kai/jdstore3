@@ -16,4 +16,6 @@
 # u.save
 
 Category.create(name: "technic")
-Category.create(name: "marvel") 
+Category.create(name: "marvel")
+Category.create(name: "starwar")
+Category.create(name: "speed")    

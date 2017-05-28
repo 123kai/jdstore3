@@ -12,7 +12,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     storage :fog
   elsif Rails.env.development?
     storage :file
-  end  
+  end
 
 
   # Override the directory where uploaded files will be stored.
@@ -24,7 +24,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   process resize_to_fit: [800, 800]
 
   version :thumb do
-   process resize_to_fill: [200,200]
+   process resize_to_fill: [250,250] 
   end
 
   version :medium do

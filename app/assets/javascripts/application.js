@@ -18,6 +18,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap/carousel
 //= require_tree .
+//= require bootstrap/modal
 
 $(document).ready(function(){
   // Activate carousel
@@ -46,7 +47,7 @@ $(document).ready(function(){
 
 
 
-//-------------- product index --------------   
+//-------------- product index --------------
 $(".box i").click(function() {
 
   var productImg = $(this).siblings("img").attr('src');
