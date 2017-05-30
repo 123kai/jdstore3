@@ -8,7 +8,6 @@
 //------- product index -------
 html, body {
   background-color: #eee;
-  // font-family: sans-serif;
   font-family: 'Loved by the King', cursive;
   font-size: 35px;
   font-weight: bold;
@@ -18,6 +17,7 @@ html, body {
 
 .product-wrapper{
   min-height: 100%;
+  margin-bottom: 3em;
 }
 
 .product-banner {
@@ -33,43 +33,37 @@ html, body {
   margin-right: auto;
 
 }
-.product-banner-what-is-new{
-  display: block;
-  width: 100%;
-  height: 200px;
-  background:  url("https://sh-s7-live-s.legocdn.com/is/image/LEGOMKTG/pick-a-brick--201606--gl--banner-background--large?$BannerBackgroundLarge$");
-  background-position: center 50%;
-  background-size: cover;
-  position: relative;
-}
 
 .product-content{
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   width: 100%;
   margin: 20px 100px;
-  
 }
 
-.product-leaf {
+.product-list {
   width: 230px;
   height: 300px;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.09);
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 18px;
+  margin-bottom: 12px;
   position: relative;
+  top: 0;
 }
 
-.product-leaf-img{
+.product-list-img{
   width: 200px;
   height: 200px;
+
 }
 
-.product-leaf  i {
+//------- plus button -------
+.product-list  i {
   width: 50px;
   height: 50px;
-  background: #70C1B3;
+  background:  #31a1e0;
   color:  #ffffff;
   border-radius: 25px;
   text-align: center;
@@ -83,30 +77,32 @@ html, body {
   transition: all 0.3s;
 }
 
-.product-leaf  i:hover{
+.product-list i:hover{
   transform: scale(1.05);
 }
 
-.product-leaf-title{
+.product-list-title{
   margin-left: 20px;
   font-size: 20px;
   font-weight: bold;
 
 }
 
-.product-leaf-price{
-  margin-left: 190px;
+.product-list-price{
+  margin-top: -20px;
+  margin-left: 180px;
   font-size: 20px;
+
 }
 
 .row p::before,
-.product-leaf-price p::before,
+.product-list-price p::before,
 .totalprice::before{
   content: "$";
 }
 
 //------- product favourite -------
-.product-leaf-favourite--active {
+.product-list-favourite--active {
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -114,7 +110,7 @@ html, body {
     height: 1.875rem;
 }
 
-.product-leaf-favourite{
+.product-list-favourite{
     content: "";
     position: absolute;
     left: 5px;               //  不是margin-left ？
@@ -127,7 +123,7 @@ html, body {
     background-image: url("https://shop.lego.com/static/images/svg/wishlist/wishlist.svg")
 }
 
-.product-leaf-favourite--active{
+.product-list-favourite--active{
     border: 0;
     clip: rect(0 0 0 0);
     position: absolute;
@@ -152,7 +148,7 @@ button {
     text-transform: none
 }
 
-.product-leaf-favourite--active:disabled,.product-leaf-favourite:disabled,button {
+.product-list-favourite--active:disabled,.product-leaf-favourite:disabled,button {
     border: 0;
     padding: 0;
     background: transparent;
@@ -207,7 +203,7 @@ button {
 
 }
 // 页面头部微调
-.product-show-page {
+.product-show-box { 
 
   width: 100%;
   z-index: 150;
@@ -247,10 +243,4 @@ button {
   font-size: 1.4em;
   font-weight: 500px;
   font-family: 'Loved by the King', cursive;
-}
-
-// 按钮区域样式
-.add-to-cart-buttom {
-  margin: 3em auto 1em;
-
 }

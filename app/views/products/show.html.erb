@@ -1,7 +1,7 @@
 <div class="container product-show-page">
   <div class="row">
-    <div class="show-option">
-      <span>All Products</span>  >   <%= link_to(@product.category.name, products_path(category: @product.category.name)) %>
+    <div class="show-option"> 
+      <%= link_to("All Products", products_path) %>  >   <%= link_to(@product.category.name, products_path(category: @product.category.name)) %>
       <span class="pull-right"><%= link_to("Back", url_for(:back)) %></span>
     </div>
 
@@ -21,7 +21,7 @@
 
         <!-- <div class="rating">
           <div class="star-rating" data-score= <%= @avg_review %> ></div>
-        </div> --> 
+        </div> -->
 
         <!-- product description  -->
         <div class="product-description">
@@ -47,10 +47,6 @@
             <div class="product-detail">
               Quantity: <%= @product.quantity %>
             </div>
-
-            <div class="product-detail">
-              <span> Overall Rating </span>
-            </div>
           </div>
         </div>
 
@@ -60,11 +56,11 @@
             <!-- add product to cart -->
           <div class="col-sm-6">
             <% if @product.quantity.present? && @product.quantity > 0 %>
-              <%= link_to("Add to cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-primary") %>
+              <%= link_to("Add to Cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-primary") %>
             <% else %>
               <a href="#" class="btn btn-danger active" role="button" disabled="disabled">Current not available</a>
             <% end %>
-            <%= link_to("Add to wishlist", "#", method: :post, class: "btn btn-danger") %>
+            <%= link_to("Add to Wishlist", "#", method: :post, class: "btn btn-danger") %>
           </div>
         </div>
       </div>

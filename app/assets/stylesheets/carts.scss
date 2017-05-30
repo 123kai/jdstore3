@@ -1,3 +1,90 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.shopping-cart {
+  margin-top: 10px;
+  font-size: 20px;
+  }
+
+
+// 清空购物车按钮
+.clean_carts {
+  padding-top: 20px;
+}
+.clean_carts .btn-success{
+  font-size: 15px;
+  text-decoration: none;
+}
+
+// 列表表头样式
+.cart-column-head {
+  background:  #31a1e0;
+  padding: 20px 0 20px 0;
+  margin-bottom: 20px;
+  color: #fff;
+  label {
+    text-align: center;
+    line-height: 4px;
+  }
+}
+
+// 购物车商品
+.product-list-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: auto;
+    width: 80px;
+  }
+}
+
+// 合计样式
+.product-price-total {
+  font-size: 2em;
+  color: #7f8c8d;
+  font-weight: lighter;
+}
+
+//------- product-show -------
+.product-show {
+margin-top: 2em;
+}
+
+//------- product-title -------
+.product-title {
+  color: #7f8c8d;
+}
+
+
+
+//------- product-price ------
+.product-price-bgcolor {
+background-color: #f8f8f8;
+padding: 1.5em 1em;
+margin-bottom: 1em;
+}
+.product-price {
+font-size: 3em;
+color: #7f8c8d;
+font-weight: lighter;
+}
+
+//------- product-quantity -------
+.product-quantity {
+margin: 1.5em auto;
+}
+
+//------- add-to-cart-button -------
+.add-to-cart-button {
+  margin: 1.2em auto 3em;
+}
+
+//------- checkout-page -------
+.checkout-page{
+  margin-top: 50px;
+}
+
+.order-form-group {
+  margin: 50px auto 60px;
+}
