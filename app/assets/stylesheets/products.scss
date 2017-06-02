@@ -215,13 +215,7 @@ button {
   // background-repeat: repeat;
 
 }
-.product-showpage-img{
-  margin-top: 20px;
-  margin-left: 45px;
-  width: 300px;
-  height: 300px;
 
-}
 // 商品标题样式
 .product-title {
   font-weight: 500px;
@@ -251,4 +245,31 @@ button {
   font-size: 1.4em;
   font-weight: 500px;
   font-family: 'Loved by the King', cursive;
+}
+
+.quantity-input {
+  color: #333;
+  text-align: center;
+  width: 60px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #FFF;
+  box-shadow: 0 16px 26px -10px rgba(3, 169, 244, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(3, 169, 244, 0.2);
+}
+.quantity {
+  .quantity-minus,
+  .quantity-plus {
+    &.disabled {
+      color: #424242;
+      cursor: not-allowed;
+      background-color: #E0E0E0;
+   }
+  }
+
+  .quantity-input {
+    border: 0;
+    cursor: not-allowed;
+    text-align: right;
+    max-width: 30px;
+  }
 }

@@ -20,6 +20,7 @@
 //= require bootstrap/modal
 //= require_tree .
 
+// ------- Caroulse -------
 $(document).ready(function(){
   // Activate carousel
   $("#myCarousel").carousel({interval: 5000});
@@ -39,5 +40,30 @@ $(document).ready(function(){
   });
   $(".right").click(function(){
     $("#myCarousel").carousel("next");
+  });
+});
+
+
+// ------- Increase & Decrease button -------
+$(document).on('turbolinks:load', function() {
+  // ------- increase   
+  $("#quantity-plus").click(function(e) {
+    var num = parseInt($("#quantity-input").val()) + 1;
+    $("#quantity-minus").removeClass("disabled");
+    $("#quantity-input").val(num);
+    e.preventDefault();
+  });
+
+// ------- decrease
+  $("#quantity-minus").click(function(e) {
+    var num = parseInt($("#quantity-input").val());
+    if (num > 1) {
+      $("#quantity-input").val(num -= 1);
+      $("#quantity-plus").removeClass("disabled");
+    }
+    if (num <= 1) {
+      $("#quantity-minus").addClass("disabled");
+    }
+    e.preventDefault();
   });
 });

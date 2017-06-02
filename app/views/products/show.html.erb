@@ -45,8 +45,10 @@
             </div>
             <!-- product quantity -->
             <div class="product-detail">
-              Quantity: <%= @product.quantity %> 
-            </div>
+              Quantity: <%= link_to("-", "", id: "quantity-minus", class: "quantity-minus btn btn-default disabled") %>
+                        <input type="text" name="quantity" value="1" id="quantity-input" class="quantity-input">
+                        <%= link_to("+", "", id: "quantity-plus", class: "quantity-plus btn btn-default #{@product.quantity <= 1 ? 'disabled' : ''}") %>
+            </div>  
           </div>
         </div>
 
