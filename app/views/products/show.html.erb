@@ -1,6 +1,6 @@
 <div class="container product-show-page">
   <div class="row">
-    <div class="show-option"> 
+    <div class="show-option">
       <%= link_to("All Products", products_path) %>  >   <%= link_to(@product.category.name, products_path(category: @product.category.name)) %>
       <span class="pull-right"><%= link_to("Back", url_for(:back)) %></span>
     </div>
@@ -8,7 +8,7 @@
     <div class="product-show-box">
       <!-- product picture -->
       <div class="col-md-5">
-        <% if @product.image.present? %>
+        <% if @product.image.present? %>  
           <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
         <% else %>
           <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
@@ -60,7 +60,12 @@
             <% else %>
               <a href="#" class="btn btn-danger active" role="button" disabled="disabled">Current not available</a>
             <% end %>
-            <%= link_to("Add to Wishlist", "#", method: :post, class: "btn btn-danger") %>
+            <% if current_user && current_user.is_member_of?(@product) %>
+              <%= link_to("Already in wishlist", quit_product_path(@product), method: :post, class: "btn btn-success") %>
+            <% else %>
+              <%= link_to("Add to wishlist", join_product_path(@product), method: :post, class: "btn btn-danger") %>
+            <% end %>
+
           </div>
         </div>
       </div>

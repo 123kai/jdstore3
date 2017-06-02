@@ -53,17 +53,22 @@
 
 
 html {
-    height: 100%;                                        // footer固定底部
+    height: 100%;                                        // footer fixed in the bottom
     }
 
 body {
-    height: 100%; 
+    min-height: 100%;                                   // footer fixed in the bottom
+    display: flex;                                      // footer fixed in the bottom
+    flex-direction: column;                             // footer fixed in the bottom
     font-family: 'Loved by the King', cursive;
     background-color: #f9f9fa;
     color: #31a1e0;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.1em;
+    .content {                                          // footer fixed in the bottom
+      flex: 1;
+    }
 }
 
 @media (max-width: 991px) {

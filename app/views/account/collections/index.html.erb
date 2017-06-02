@@ -1,0 +1,27 @@
+<div class="account-box">
+  <h3 class="text-center"> My Collections </h3>
+  <br>
+
+  <table class="table table">
+    <thead>
+      <tr>
+        <th> Product Name </th>
+        <th> Price </th>
+        <th> Category </th>
+        <th> Operation </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @collections.each do |collection| %>
+        <tr>
+          <td><%= link_to(collection.title, product_path(collection)) %></td>
+          <td>$<%= collection.price %></td>
+          <td><%= collection.category %></td>
+          <td><%= link_to product_path(collection), method: :delete do%>
+            <i class="fa fa-trash"></i>  
+          <% end %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

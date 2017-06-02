@@ -4,10 +4,29 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :orders 
- def admin?
-   is_admin
- end
+  has_many :orders
+
+
+  def admin?
+    is_admin
+  end
+
+  #------- add to collection relationship ------- 
+  has_many :collections
+  has_many :participated_products, through: :collections, source: :product
+
+  def is_member_of?(product)
+    participated_products.include?(product)
+  end
+
+  def join_collection!(product)
+    participated_products << product
+  end
+
+  def quit_collection!(product)
+    participated_products.delete(product)
+
+  end
 
 
 end

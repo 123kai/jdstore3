@@ -54,8 +54,10 @@ html, body {
 }
 
 .product-list-img{
-  width: 200px;
-  height: 200px;
+  margin-top: 20px;
+  margin-left: 45px;
+  width: 160px;
+  height: 180px;
 
 }
 
@@ -122,6 +124,7 @@ html, body {
     background-size: 100%;
     background-image: url("https://shop.lego.com/static/images/svg/wishlist/wishlist.svg")
 }
+
 
 .product-list-favourite--active{
     border: 0;
@@ -203,7 +206,7 @@ button {
 
 }
 // 页面头部微调
-.product-show-box { 
+.product-show-box {
 
   width: 100%;
   z-index: 150;
@@ -213,7 +216,13 @@ button {
   // background-repeat: repeat;
 
 }
+.product-showpage-img{
+  margin-top: 20px;
+  margin-left: 45px;
+  width: 300px;
+  height: 300px; 
 
+}
 // 商品标题样式
 .product-title {
   font-weight: 500px;

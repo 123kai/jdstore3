@@ -6,14 +6,20 @@
         <% @products.each do |product| %>
           <div class="product-list">
             <%= link_to product_path(product) do %>
-            <!-- <div class="product-list">     -->
-              <% if product.image.present? %> 
-                <%= image_tag(product.image.medium.url, class: "product-list-img") %>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "product-list-img") %>
               <% else %>
                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
               <% end %>
-              <i class="fa fa-plus"></i>
-              <button type="button" class="product-list-favourite"></button>
+              <i class="fa fa-plus"></i>   
+              <% if current_user && current_user.is_member_of?(product) %>
+                <%= link_to quit_product_path(product), :class => "product-list-favourite", method: :post do %>
+                <% end %>
+              <% else %>
+                <%= link_to join_product_path(product), :class => "product-list-favourite", method: :post do %>
+                <% end %>
+              <% end %>
+
               <h3 class="product-list-title"><%= product.title %></h3>
               <div class="product-ratings">
                 <div class="rating-brick">

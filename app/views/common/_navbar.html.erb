@@ -47,11 +47,15 @@
             </li>
 
             <li>
+              <%= link_to("Wishlist", account_collections_path) %>  
+            </li>
+
+            <li>
               <%= link_to carts_path do %>
                 Cart <i class="fa fa-shopping-cart"></i>(<%= current_cart.products.count %>)
               <% end %>
             </li>
-            <% if !current_user %>   
+            <% if !current_user %>
               <li><a href="#" data-toggle="modal" data-target="#signup-modal">Sign Up</a></li>
               <li><a href="#" data-toggle="modal" data-target="#login-modal">Log In</a></li>
               <!-- <li><%= button_to('Sign Up',new_user_registration_path, method: :get, class: "sign-up-btn") %></li>

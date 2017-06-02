@@ -1,18 +1,77 @@
-<h2> Order List </h2>
+<!-- <div class="account-box">
+  <h3 class="text-center"> My Order List </h3>
+  <br>
+  <table class="table table">
+    <thead>
+      <tr>
+        <th> Order # </th>
+        <th> Order Status </th>
+        <th> Created Time </th>
+        <th> Operation </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= link_to(order.id, order_path(order.token)) %></td>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th> # </th>
-      <th> Created Time </th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @orders.each do |order| %>
-    <tr>
-      <td> <%= link_to(order.id, order_path(order.token)) %> </td>
-      <td> <%= order.created_at.to_s(:long) %> </td>
-    </tr>
-    <% end %>
-  </tbody>   
-</table>
+          <% if order.order_cancelled? %>
+            <td>Your order has beed cancelled </td>
+          <% elsif !order.is_paid? %>
+            <td>Waiting for payment </td>
+          <% else %>
+            <td> Paid </td>
+          <% end %>
+
+          <td><%= order.created_at.to_s(:long) %></td>
+          <td><%= link_to("Details", order_path(order.token)) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div> -->
+
+<div class="account-box">
+  <div class="row">
+
+      <div class="row"> 
+          <h3 class="text-center"> My Order List </h3>
+      </div>
+
+
+      <!-- 购物列表 -->
+      <div class="shopping-cart">
+        <!-- 列表头部 -->
+        <div class="cart-column-head center-block">
+          <label class="col-xs-3 product-image-cart"> Order # </label>
+          <label class="col-xs-3 product-title-cart"> Order Status </label>
+          <label class="col-xs-3 product-price-cart"> Created At </label>
+          <label class="col-xs-3 product-quantity-cart"> Operation </label>
+        </div>
+
+        <!-- 列表购物车商品 -->
+        <% @orders.each do |order| %>
+          <div class="product-list row text-center">
+            <div class="col-xs-3">
+              <%= link_to(order.id, order_path(order.token)) %>
+            </div>
+            <div class="col-xs-3">
+              <% if order.order_cancelled? %>
+                <td>Your order has beed cancelled </td>
+              <% elsif !order.is_paid? %>
+                <td>Waiting for payment </td>
+              <% else %>
+                <td> Paid </td>
+              <% end %>
+            </div>
+            <div class="col-xs-3">
+              <%= order.created_at.to_s(:long) %>
+            </div>
+            <div class="col-xs-3">
+              <%= link_to("Details", order_path(order.token)) %>
+            </div>
+        <% end %>
+      </div>
+
+  </div>
+</div>

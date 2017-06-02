@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :products do
     member do
       post :add_to_cart
+      post :join            # add to collection
+      post :quit            # remove from collection
     end
 
     collection do
@@ -19,7 +21,7 @@ Rails.application.routes.draw do
 
   # admin
   namespace :admin do
-    resources :categories  
+    resources :categories
     resources :products
     resources :orders do
       member do
@@ -30,19 +32,13 @@ Rails.application.routes.draw do
       end
     end
 
-    # resources :categories do
-    #   member do
-    #     post :publish
-    #     post :hide
-    #     post :up
-    #     post :down
-    #   end
-    # end
+
 
   end
 
   namespace :account do
     resources :orders
+    resources :collections
   end
 
   # carts
