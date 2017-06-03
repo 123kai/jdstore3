@@ -16,8 +16,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css?family=LovedbytheKing');
-
+// @import url('https://fonts.googleapis.com/css?family=LovedbytheKing');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');
 
 
 /*5种背景颜色*/
@@ -59,10 +59,10 @@ body {
     min-height: 100%;                                   // footer fixed in the bottom
     display: flex;                                      // footer fixed in the bottom
     flex-direction: column;                             // footer fixed in the bottom
-    font-family: 'Loved by the King', cursive;
+    font-family: 'Noto Sans SC', sans-serif;
     background-color: #f9f9fa;
     color: #31a1e0;
-    font-size: 14px;
+    font-size: 12px; 
     font-weight: bold;
     letter-spacing: 0.1em;
     .content {                                          // footer fixed in the bottom
