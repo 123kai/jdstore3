@@ -3,11 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-@import url('https://fonts.googleapis.com/css?family=Loved+by+the+King');
+// @import url('https://fonts.googleapis.com/css?family=Loved+by+the+King');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');
+
+
+
+
 //------- product index -------
 html, body {
-  background-color: #eee;
-  font-family: 'Loved by the King', cursive;
+  background-color: #eee; 
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 35px;
   font-weight: bold;
 
