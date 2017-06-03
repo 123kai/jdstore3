@@ -36,7 +36,7 @@ gem 'font-awesome-rails'
 gem "carrierwave"
 gem "mini_magick"
 gem 'letter_opener', group: :development
-gem 'ransack'         
+gem 'ransack'
 gem 'aasm'
 gem 'figaro'
 gem 'fog'
@@ -64,6 +64,7 @@ group :development do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
