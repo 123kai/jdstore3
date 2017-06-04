@@ -11,10 +11,10 @@
 
 //------- product index -------
 html, body {
-  background-color: #eee; 
+  background-color: #eee;
   font-family: 'Noto Sans SC', sans-serif;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 400;
 
 }
 
@@ -193,7 +193,7 @@ button {
 //------- product show page -------
 .show-option {
   font-size: 25px;
-  font-weight: bolder;
+  font-weight: 400;
   margin-top: 20px;
   color: #999;
   a {
@@ -211,13 +211,10 @@ button {
 }
 // 页面头部微调
 .product-show-box {
-
+  font-family: 'Noto Sans SC', sans-serif;
   width: 100%;
   z-index: 150;
   margin-top: 2em;
-  // background-image: url("https://www.lego.com/r/www/r/portals/-/media/images/lego-life/shared/backgr…nds/patterns/cardboards/cardboard_bg_lightblue_vertical.jpg?l.r=-889903875");
-  // background-color: #d2dde3;
-  // background-repeat: repeat;
 
 }
 
@@ -249,7 +246,6 @@ button {
   margin: 1.5em auto;
   font-size: 1.4em;
   font-weight: 500px;
-  font-family: 'Loved by the King', cursive;
 }
 
 .quantity-input {
