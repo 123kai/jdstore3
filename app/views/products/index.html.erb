@@ -1,34 +1,42 @@
-<div class="product-wrapper">
+<div class="container product-index-box">
   <div class="row">
-    <div class="product-banner">
-    </div>
-      <div class="product-content">
-        <% @products.each do |product| %>
-          <div class="product-list">
-            <%= link_to product_path(product) do %>
-              <% if product.image.present? %>
-                <%= image_tag(product.image.thumb.url, class: "product-list-img") %>
-              <% else %>
-                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-              <% end %>
-              <i class="fa fa-plus"></i>   
-              <% if current_user && current_user.is_member_of?(product) %>
-                <%= link_to quit_product_path(product), :class => "product-list-favourite", method: :post do %>
-                <% end %>
-              <% else %>
-                <%= link_to join_product_path(product), :class => "product-list-favourite", method: :post do %>
-                <% end %>
-              <% end %>
+    <!-- <div class="product-banner">
+    </div> -->
 
-              <h3 class="product-list-title"><%= product.title %></h3>
-              <div class="product-ratings">
-                <div class="rating-brick">
-                </div>
-              </div>
-              <p class="product-list-price"><%= product.price %></p>
-          </div>
-          <% end %>
-        <% end %>
+    <!--===== 广告图 =====-->
+    <section class="intro-box">
+      <div class="row">
+        <div class="col-md-12">
+          <%= image_tag("bg.jpg") %><!-- 图片位置 -->
+        </div>
       </div>
+    </section>
+
+    <hr/>  
+    <section class="product-items-box">
+      <% @products.each do |product| %>
+        <div class="col-xs-6 col-sm-4 col-md-3 product-list">
+          <%= link_to product_path(product) do %>
+            <% if product.image.present? %>
+              <%= image_tag(product.image.thumb.url, class: "product-list-img") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% end %>
+            <i class="fa fa-plus"></i>
+            <% if current_user && current_user.is_member_of?(product) %>
+              <%= link_to quit_product_path(product), :class => "product-list-favourite", method: :post do %>
+              <% end %>
+            <% else %>
+              <%= link_to join_product_path(product), :class => "product-list-favourite", method: :post do %>
+              <% end %>
+            <% end %>
+            <div class="product-info">
+              <h3 class="product-list-title"><%= product.title %></h3>
+              <p class="product-list-price"><%= product.price %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
   </div>
 </div>
