@@ -1,0 +1,92 @@
+/* line 4, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.shopping-cart {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* line 11, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.clean_carts {
+  padding-top: 20px;
+}
+
+/* line 14, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.clean_carts .btn-success {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* line 20, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.cart-column-head {
+  background: #31a1e0;
+  padding: 20px 0 20px 0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+/* line 25, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.cart-column-head label {
+  text-align: center;
+  line-height: 4px;
+}
+
+/* line 32, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-list-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 36, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-list-cart img {
+  height: auto;
+  width: 80px;
+}
+
+/* line 43, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-price-total {
+  font-size: 2em;
+  color: #7f8c8d;
+  font-weight: lighter;
+}
+
+/* line 50, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-show {
+  margin-top: 2em;
+}
+
+/* line 55, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-title {
+  color: #7f8c8d;
+}
+
+/* line 62, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-price-bgcolor {
+  background-color: #f8f8f8;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+}
+
+/* line 67, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-price {
+  font-size: 3em;
+  color: #7f8c8d;
+  font-weight: lighter;
+}
+
+/* line 74, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.product-quantity {
+  margin: 1.5em auto;
+}
+
+/* line 79, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.add-to-cart-button {
+  margin: 1.2em auto 3em;
+}
+
+/* line 84, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.checkout-page {
+  margin-top: 50px;
+}
+
+/* line 88, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/carts.scss */
+.order-form-group {
+  margin: 50px auto 60px;
+}
