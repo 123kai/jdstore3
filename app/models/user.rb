@@ -5,13 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
+  has_many :comments 
 
 
   def admin?
     is_admin
   end
 
-  #------- add to collection relationship ------- 
+  #------- add to collection relationship -------
   has_many :collections
   has_many :participated_products, through: :collections, source: :product
 

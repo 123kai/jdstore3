@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       get :technic
       get :marvel
     end
+
+    resources :comments 
   end
 
   # admin

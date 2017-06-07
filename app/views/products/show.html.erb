@@ -45,13 +45,13 @@
                 Quantity: <%= link_to("-", "", id: "quantity-minus", class: "quantity-minus btn btn-default disabled") %>
                         <input type="text" name="quantity" value="1" id="quantity-input" class="quantity-input">
                         <%= link_to("+", "", id: "quantity-plus", class: "quantity-plus btn btn-default #{@product.quantity <= 1 ? 'disabled' : ''}") %>
-              </span> 
+              </span>
             </div>
           </div>
         </div>
 
 
-        <!-- button -->
+        <!-- Start button -->
         <div class="add-to-cart-buttom row">
             <!-- add product to cart -->
           <div class="col-sm-6">
@@ -65,11 +65,18 @@
             <% else %>
               <%= link_to("Add to wishlist", join_product_path(@product), method: :post, class: "btn btn-danger") %>
             <% end %>
-
           </div>
         </div>
+        <!-- End button -->
       </div>
 
     </div>
   </div>
 </div>
+
+<hr>
+<!-- Start Comments   -->
+<div class="container">  
+   <%= render "comments/form" %>
+</div>
+<!-- End Comments -->

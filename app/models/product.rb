@@ -7,5 +7,8 @@ class Product < ApplicationRecord
 
   # add to collection
   has_many :collection
-  has_many :members, through: :collections, source: :user 
+  has_many :members, through: :collections, source: :user
+
+  # comments
+  has_many :comments 
 end

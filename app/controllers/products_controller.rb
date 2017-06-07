@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @comments = @product.comments 
   end
 
   def add_to_cart
@@ -45,7 +46,7 @@ class ProductsController < ApplicationController
 
     if current_user.is_member_of?(@product)
       current_user.quit_collection!(@product)
-      flash[:notice] = "This product has already been removed from your Wishlist"  
+      flash[:notice] = "This product has already been removed from your Wishlist"
     end
 
     redirect_to product_path(@product)
