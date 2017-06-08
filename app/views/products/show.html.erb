@@ -69,14 +69,109 @@
         </div>
         <!-- End button -->
       </div>
-
     </div>
+
+    <div class="product-details">
+      <div class="col-md-8  product-particulars">
+        <div class="row">
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+              <a href="#tab_default_1" data-toggle="tab">Product Details</a>
+            </li>
+            <li>
+              <a href="#tab_default_2" data-toggle="tab">Comments (<%= @product.comments.count %>) </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div class="product-particulars-box row tab-pane active" id="tab_default_1">
+            <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+          </div>
+          <div class="product-particulars-box row tab-pane" id="tab_default_2">
+            <div class="text-center">
+              <h3>Evaluation</h3>
+              Play Experience: <div class="star-play" data-score= <%= @avg_comment %> ></div>
+              Price: <div class="star-price" data-score= <%= @avg_price %> ></div>
+              Difficulty: <div class="star-difficulty" data-score= <%= @avg_difficulty %> ></div>
+            </div>
+            <%= link_to("Comment", new_product_comment_path(@product), :class => "btn btn-lg btn-info") %>
+            <hr>
+            <% @comments.each do |comment| %>
+             <div class="comment"> 
+                <ul>
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-7 comment-user-email"><%= comment.user.email %></div>
+                      <div class="col-xs-4"><%= comment.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
+                      <div class="col-xs-1">
+                        <% if comment.user == current_user %>
+                          <%= link_to product_comment_path(@product, comment), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash"></i><% end %>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      Play Experience: <div class="star-play" data-score= <%= @avg_comment %> ></div>
+                      Price: <div class="star-price" data-score= <%= @avg_price %> ></div>
+                      Difficulty: <div class="star-difficulty" data-score= <%= @avg_difficulty %> ></div>
+                      <%= comment.content %>
+                    </div>
+                  </li>
+                </ul>
+                <div class="comment-hr">
+                  <hr>
+                </div>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<hr>
-<!-- Start Comments   -->
-<div class="container">  
-   <%= render "comments/form" %>
-</div>
-<!-- End Comments -->
+
+<script>
+  $('.star-play').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-price').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-difficulty').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+
+  $('#star-play').raty({
+  path: '/assets/',
+  scoreName: 'comment[play]'
+  });
+
+  $('#star-price').raty({
+  path: '/assets/',
+  scoreName: 'comment[price]'
+  });
+
+  $('#star-difficulty').raty({
+      path: '/assets/',
+      scoreName: 'comment[difficulty]'
+  });
+
+
+// <!-- 必须要选一颗星 -->
+//   $('#star-play img').eq(0).trigger('click')
+//   $('#star-price img').eq(0).trigger('click')
+//   $('#star-difficulty img').eq(0).trigger('click')
+
+</script>

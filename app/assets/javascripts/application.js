@@ -20,6 +20,7 @@
 //= require bootstrap/modal
 //= require_tree .
 
+
 // ------- Caroulse -------
 $(document).ready(function(){
   // Activate carousel
@@ -46,7 +47,7 @@ $(document).ready(function(){
 
 // ------- Increase & Decrease button -------
 $(document).on('turbolinks:load', function() {
-  // ------- increase   
+  // ------- increase
   $("#quantity-plus").click(function(e) {
     var num = parseInt($("#quantity-input").val()) + 1;
     $("#quantity-minus").removeClass("disabled");

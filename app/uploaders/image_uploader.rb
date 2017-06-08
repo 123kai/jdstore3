@@ -14,21 +14,20 @@ class ImageUploader < CarrierWave::Uploader::Base
     storage :file
   end
 
-
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fit: [800, 800]
+  process resize_to_fit: [1000, 1000] 
 
   version :thumb do
    process resize_to_fill: [120,120]
   end
 
   version :medium do
-   process resize_to_fill: [400,400]  
+   process resize_to_fill: [400,400]
   end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

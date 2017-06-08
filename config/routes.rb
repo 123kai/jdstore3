@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   # products
   resources :products do
+    resources :comments
+    
     member do
       post :add_to_cart
       post :join            # add to collection
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
       get :marvel
     end
 
-    resources :comments 
+
   end
 
   # admin
