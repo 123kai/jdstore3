@@ -1,0 +1,399 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/earlyaccess/notosanssc.css");
+/* line 13, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+html, body {
+  background-color: #eee;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* line 21, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-index-box {
+  margin-bottom: 3em;
+}
+
+/* 广告图 */
+/* line 27, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.intro-box {
+  text-align: center;
+}
+/* line 30, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.intro-box img {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* line 37, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.menu-box {
+  text-align: center;
+}
+
+/*===== Dropdown ======*/
+/* line 41, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.dropdown-menu {
+  background-color: #fff;
+  min-width: 175px;
+  /* 连结 */
+  /* 连结-鼠标滑动效果 */
+}
+/* line 46, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.dropdown-menu a {
+  padding: 8px 17px;
+}
+/* line 52, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: #0070DE !important;
+}
+
+/* 下拉选单三角箭头 */
+/* line 59, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.dropdown-menu:before {
+  content: "";
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  z-index: 10;
+}
+
+/* 页面路径 & 排序 */
+/* line 70, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.path-sort-box {
+  text-align: left;
+  height: 20px;
+}
+/* line 74, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.path-sort-box .left-box {
+  float: left;
+}
+/* line 78, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.path-sort-box .right-box {
+  float: right;
+}
+/* line 81, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.path-sort-box .right-box button {
+  margin: -15px 0 -15px 0;
+  padding: 7.5px 10px 7.5px 10px;
+  border: 2px solid #666;
+  color: #333;
+}
+/* line 88, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.path-sort-box .right-box button:focus {
+  background-color: #fff;
+  color: #333;
+}
+/* line 93, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.path-sort-box .right-box ul {
+  margin-top: 15px;
+}
+
+/* line 100, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-content {
+  display: block;
+  width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+/* line 108, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list {
+  display: inline-block;
+  width: 220px;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 2em;
+  border: 1px dashed #47C0C2;
+}
+
+/* line 119, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-img {
+  margin-top: 20px;
+  margin-left: 45px;
+  width: 160px;
+  height: 180px;
+  background: #fff;
+}
+
+/* line 128, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list:hover {
+  opacity: 0.3;
+}
+
+/* line 132, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list i {
+  width: 50px;
+  height: 50px;
+  background: #31a1e0;
+  color: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.4rem;
+  position: absolute;
+  right: 25px;
+  top: 220px;
+  box-shadow: 0 0 4px 2px rgba(80, 80, 80, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* line 149, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list i:hover {
+  transform: scale(1.05);
+}
+
+/* line 153, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-title {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 160, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-price {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+/* line 167, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.row p::before,
+.product-list-price p::before,
+.totalprice::before {
+  content: "$";
+}
+
+/* line 174, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-favourite--active {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+/* line 182, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-favourite {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 10%;
+  height: 10%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  background-image: url("https://shop.lego.com/static/images/svg/wishlist/wishlist.svg");
+}
+
+/* line 196, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-favourite--active {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -.0625rem;
+  padding: 0;
+  width: .0625rem;
+  height: 0.0625rem;
+}
+
+/* line 207, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+button {
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* line 213, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+button {
+  overflow: visible;
+}
+
+/* line 217, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+button {
+  text-transform: none;
+}
+
+/* line 221, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-list-favourite--active:disabled, .product-leaf-favourite:disabled, button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* line 231, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.admin-product-box {
+  margin: 30px auto;
+  padding-left: 70px;
+}
+
+/* line 236, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.sidebox {
+  margin-top: 200px;
+  max-width: 300px;
+}
+
+/* line 244, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.show-option {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #999;
+}
+/* line 249, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.show-option a {
+  color: #999;
+}
+/* line 252, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.show-option a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+/* line 258, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-show-box {
+  margin: 5em;
+}
+
+/* line 263, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-show-box {
+  font-family: 'Noto Sans SC', sans-serif;
+  width: 100%;
+  z-index: 150;
+  margin-top: 2em;
+}
+
+/* line 272, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-title {
+  font-weight: 500px;
+}
+
+/* line 278, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-description {
+  margin: 1.5em auto 2em;
+  line-height: 1.6em;
+}
+
+/* line 284, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-price {
+  background-color: #f5f5f5;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 289, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-price {
+  font-size: 2em;
+  font-weight: 500px;
+}
+
+/* line 295, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-detail {
+  margin: 1.5em auto;
+  font-size: 1.4em;
+  font-weight: 500px;
+}
+
+/* line 301, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.quantity-input {
+  color: #333;
+  text-align: center;
+  width: 60px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #FFF;
+  box-shadow: 0 16px 26px -10px rgba(3, 169, 244, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(3, 169, 244, 0.2);
+}
+
+/* line 313, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.quantity .quantity-minus.disabled,
+.quantity .quantity-plus.disabled {
+  color: #424242;
+  cursor: not-allowed;
+  background-color: #E0E0E0;
+}
+/* line 320, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.quantity .quantity-input {
+  border: 0;
+  cursor: not-allowed;
+  text-align: right;
+  max-width: 30px;
+}
+
+/* line 327, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-info {
+  text-align: left;
+  line-height: 14px;
+  min-height: 55px;
+}
+
+/* line 333, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-evaluation {
+  display: block;
+  height: 500px;
+}
+
+/* line 337, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-details {
+  margin-top: 100px;
+}
+
+/* line 341, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-particulars {
+  margin: 1.1em 0 3em;
+}
+
+/* line 344, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.product-particulars-box {
+  border: 1px solid #e3e3e3;
+  border-top: none;
+  padding: 2em 1.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+/* line 354, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment-form {
+  text-align: left;
+  padding: 2em 2em;
+}
+
+/* line 358, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment-button {
+  text-align: left;
+  padding: 0 2em;
+  margin-top: -2em;
+}
+
+/* line 363, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment {
+  text-align: left;
+}
+/* line 365, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment li {
+  list-style: none;
+}
+
+/* line 369, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment-user-email {
+  font-weight: bold;
+}
+
+/* line 372, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment {
+  margin: 2em 3em;
+}
+
+/* line 375, /Users/hekai/jdstore3/jdstore/app/assets/stylesheets/products.scss */
+.comment-hr {
+  padding: 0 3em;
+}
